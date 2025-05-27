@@ -1,0 +1,486 @@
+/* Custom CSS for KayGifts x Cafe 75 */
+
+/* General Styles */
+:root {
+  --primary: #76594e;
+  --secondary: #b8a59e;
+  --accent: #e2c4a5;
+  --light: #f8f5f2;
+  --dark: #453732;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: var(--dark);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--dark);
+  position: relative;
+  display: inline-block;
+}
+
+.section-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* Navigation */
+#mainNav {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+#mainNav .navbar-brand {
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+#mainNav .navbar-brand img {
+  transition: all 0.3s ease;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+  color: var(--dark);
+  font-weight: 500;
+  font-size: 1rem; /* preserved original */
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link:hover,
+#mainNav .navbar-nav .nav-item .nav-link:active {
+  color: var(--primary);
+}
+
+#mainNav.navbar-shrink {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section */
+.hero-section {
+  height: 65vh;
+  min-height: 500px;
+  background-image: url('/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 8rem;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-section h1 {
+  font-size: 4.5rem;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+.hero-section h2 {
+  font-size: 5.5rem;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.hero-section2 {
+  height: 65vh;
+  min-height: 500px;
+  background-image: url('/images/doorgift/background/IMG-20250525-WA0216.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 8rem;
+}
+
+.hero-section3 {
+  height: 65vh;
+  min-height: 500px;
+  background-image: url('/images/Kafe 75.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 8rem;
+}
+
+.hero-section4 {
+  height: 65vh;
+  min-height: 500px;
+  background-image: url('/images/corporate/IMG-20250525-WA0092.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 8rem;
+}
+
+.hero-section5 {
+  height: 65vh;
+  min-height: 500px;
+  background-image: url('/images/about/IMG-20250525-WA0279.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 8rem;
+}
+
+/* Features Section */
+.feature-item {
+  position: relative;
+}
+
+.feature-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+
+.feature-img-wrapper img {
+  transition: transform 0.5s ease;
+}
+
+.feature-img-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.feature-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--dark);
+}
+
+.feature-desc {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #6c757d;
+}
+
+.btn-learn-more {
+  transition: all 0.3s ease;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+}
+
+.btn-learn-more:hover {
+  background-color: var(--dark);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Appointment Section */
+.appointment {
+  background-color: var(--light);
+}
+
+.appointment-content {
+  padding: 2rem;
+}
+
+.appointment-btn {
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.appointment-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section */
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #6c757d;
+}
+
+.gallery-img {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Social Media Section */
+.social-platform-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.social-img {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.social-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon {
+  color: var(--dark);
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+
+/* Contact Section */
+.coffee-beans {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.coffee-bean {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.contact-info {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.map-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark) !important;
+}
+
+/* NEW: Feature Card */
+.feature-card {
+  padding: 2rem;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+/* NEW: Icon Circle */
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  color: var(--primary);
+}
+
+.feature-card:hover .icon-circle {
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+/* NEW: Timeline */
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: var(--primary);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.timeline-badge {
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-content {
+  width: calc(50% - 50px);
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-left: auto;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  transform: rotate(45deg);
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+  left: -10px;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+  right: -10px;
+}
+
+/* NEW: About Page Specific */
+.about-header {
+  background-color: var(--dark);
+}
+
+.company-profile .card {
+  transition: all 0.3s ease;
+}
+
+.company-profile .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  .hero-section h1 {
+    font-size: 5rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* NEW: Timeline adjustments */
+  .timeline::before {
+    left: 30px;
+  }
+  
+  .timeline-badge {
+    left: 30px;
+  }
+  
+  .timeline-content {
+    width: calc(100% - 80px);
+    margin-left: 80px !important;
+  }
+  
+  .timeline-content::before {
+    left: -10px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 400px;
+  }
+  
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 2.2rem;
+  }
+  
+  .feature-title {
+    font-size: 1.8rem;
+  }
+
+  /* NEW: smaller section title & badge */
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .timeline-badge {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 1.5rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .feature-title {
+    font-size: 1.5rem;
+  }
+
+  /* NEW: more compact timeline content */
+  .timeline-content {
+    padding: 1rem;
+  }
+}
