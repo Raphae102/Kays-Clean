@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 #mainNav .navbar-nav .nav-item .nav-link {
   color: var(--dark);
   font-weight: 500;
-  font-size: 1rem; /* preserved original */
+  font-size: 1rem;
   padding: 0.75rem 1rem;
   transition: all 0.3s ease;
   letter-spacing: 1px;
@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 .hero-section {
-  height: 65vh;
+  height: 100vh;
   min-height: 500px;
   background-image: url('/images/background.jpg');
   background-size: cover;
@@ -99,10 +99,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
 
-.hero-section2 {
+.hero-section2, .hero-section3, .hero-section4, .hero-section5 {
   height: 65vh;
   min-height: 500px;
-  background-image: url('/images/doorgift/background/IMG-20250525-WA0216.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -110,42 +109,15 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 8rem;
 }
 
-.hero-section3 {
-  height: 65vh;
-  min-height: 500px;
-  background-image: url('/images/Kafe 75.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  padding-top: 8rem;
-}
-
-.hero-section4 {
-  height: 65vh;
-  min-height: 500px;
-  background-image: url('/images/corporate/IMG-20250525-WA0092.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  padding-top: 8rem;
-}
-
-.hero-section5 {
-  height: 65vh;
-  min-height: 500px;
-  background-image: url('/images/about/IMG-20250525-WA0279.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  padding-top: 8rem;
-}
+.hero-section2 { background-image: url('/images/doorgift/background/IMG-20250525-WA0216.jpg'); }
+.hero-section3 { background-image: url('/images/Kafe 75.jpg'); }
+.hero-section4 { background-image: url('/images/corporate/IMG-20250525-WA0092.jpg'); }
+.hero-section5 { background-image: url('/images/about/IMG-20250525-WA0279.jpg'); }
 
 /* Features Section */
 .feature-item {
   position: relative;
+  margin-bottom: 4rem;
 }
 
 .feature-img-wrapper {
@@ -157,6 +129,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .feature-img-wrapper img {
   transition: transform 0.5s ease;
+  width: 100%;
+  height: auto;
 }
 
 .feature-img-wrapper:hover img {
@@ -210,10 +184,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* About Section */
+.about {
+  padding: 5rem 0;
+}
+
 .about p {
   font-size: 1.1rem;
   line-height: 1.8;
   color: #6c757d;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.about-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.about-grid img:hover {
+  transform: scale(1.05);
 }
 
 .gallery-img {
@@ -402,19 +399,26 @@ footer {
 
 /* Media Queries */
 @media (max-width: 992px) {
+  .hero-section {
+    height: 70vh;
+  }
+  
   .hero-section h1 {
-    font-size: 5rem;
+    font-size: 3rem;
   }
   
   .hero-section h2 {
     font-size: 2.5rem;
   }
   
-  .section-title {
-    font-size: 2rem;
+  .feature-item {
+    margin-bottom: 3rem;
   }
-
-  /* NEW: Timeline adjustments */
+  
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
   .timeline::before {
     left: 30px;
   }
@@ -435,22 +439,26 @@ footer {
 
 @media (max-width: 768px) {
   .hero-section {
-    min-height: 400px;
+    height: 60vh;
+    padding-top: 6rem;
   }
   
   .hero-section h1 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
   
   .hero-section h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   
   .feature-title {
     font-size: 1.8rem;
   }
-
-  /* NEW: smaller section title & badge */
+  
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  
   .section-title {
     font-size: 2rem;
   }
@@ -463,23 +471,31 @@ footer {
 }
 
 @media (max-width: 576px) {
+  .hero-section {
+    height: 50vh;
+    padding-top: 4rem;
+  }
+  
   .hero-section h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   
   .hero-section h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+  }
+  
+  .feature-title {
+    font-size: 1.5rem;
   }
   
   .section-title {
     font-size: 1.8rem;
   }
   
-  .feature-title {
-    font-size: 1.5rem;
+  .about p {
+    font-size: 1rem;
   }
-
-  /* NEW: more compact timeline content */
+  
   .timeline-content {
     padding: 1rem;
   }
