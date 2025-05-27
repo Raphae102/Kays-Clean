@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-section {
   height: 100vh;
   min-height: 500px;
-  background-image: url('../images/background.jpg');
+  background-image: url('/images/background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -109,10 +109,10 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 8rem;
 }
 
-.hero-section2 { background-image: url('../images/doorgift/background/IMG-20250525-WA0216.jpg'); }
-.hero-section3 { background-image: url('../images/Kafe 75.jpg'); }
-.hero-section4 { background-image: url('../images/corporate/IMG-20250525-WA0092.jpg'); }
-.hero-section5 { background-image: url('../images/about/IMG-20250525-WA0279.jpg'); }
+.hero-section2 { background-image: url('/images/doorgift/background/IMG-20250525-WA0216.jpg'); }
+.hero-section3 { background-image: url('/images/Kafe 75.jpg'); }
+.hero-section4 { background-image: url('/images/corporate/IMG-20250525-WA0092.jpg'); }
+.hero-section5 { background-image: url('/images/about/IMG-20250525-WA0279.jpg'); }
 
 /* Features Section */
 .feature-item {
