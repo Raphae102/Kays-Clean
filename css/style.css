@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-section {
   height: 100vh;
   min-height: 500px;
-  background-image: url('images/background.jpg');
+  background-image: url('/images/background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
