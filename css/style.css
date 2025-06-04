@@ -172,6 +172,75 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
+/* Doorgift Collections */
+.gift-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.gift-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.gift-image {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.gift-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gift-card:hover .gift-image img {
+  transform: scale(1.1);
+}
+
+.gift-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.gift-info h4 {
+  font-size: 1.25rem;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
+
+.gift-info p {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.category-section {
+  padding: 2rem 0;
+}
+
+.category-section h3 {
+  color: var(--dark);
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.category-section h3:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: var(--primary);
+}
+
 /* Features Section */
 .feature-item {
   position: relative;
@@ -439,121 +508,6 @@ h1, h2, h3, h4, h5, h6 {
 /* Footer */
 footer {
   background-color: var(--dark) !important;
-}
-
-/* NEW: Feature Card */
-.feature-card {
-  padding: 2rem;
-  transition: all 0.3s ease;
-  height: 100%;
-}
-
-.feature-card:hover {
-  transform: translateY(-10px);
-}
-
-/* NEW: Icon Circle */
-.icon-circle {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: var(--light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  transition: all 0.3s ease;
-  color: var(--primary);
-}
-
-.feature-card:hover .icon-circle {
-  background-color: var(--primary);
-  color: var(--light);
-}
-
-/* NEW: Timeline */
-.timeline {
-  position: relative;
-  padding: 2rem 0;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 100%;
-  background-color: var(--primary);
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 3rem;
-  width: 100%;
-}
-
-.timeline-badge {
-  width: 60px;
-  height: 60px;
-  background-color: var(--primary);
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
-.timeline-content {
-  width: calc(50% - 50px);
-  padding: 1.5rem;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  position: relative;
-  margin-left: auto;
-}
-
-.timeline-item:nth-child(even) .timeline-content {
-  margin-left: 0;
-  margin-right: auto;
-}
-
-.timeline-content::before {
-  content: '';
-  position: absolute;
-  top: 20px;
-  width: 20px;
-  height: 20px;
-  background: white;
-  transform: rotate(45deg);
-}
-
-.timeline-item:nth-child(odd) .timeline-content::before {
-  left: -10px;
-}
-
-.timeline-item:nth-child(even) .timeline-content::before {
-  right: -10px;
-}
-
-/* NEW: About Page Specific */
-.about-header {
-  background-color: var(--dark);
-}
-
-.company-profile .card {
-  transition: all 0.3s ease;
-}
-
-.company-profile .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1) !important;
 }
 
 /* Media Queries */
