@@ -305,7 +305,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-section2, .hero-section3, .hero-section4, .hero-section5 {
-  height: 130vh;
+  height: 100vh;
   min-height: 500px;
   background-size: cover;
   background-position: center;
@@ -337,14 +337,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .menu-img {
   width: 100%;
-  height: auto;
+  height: 250px;
   object-fit: cover;
   transition: all 0.3s ease;
 }
 
 .menu-img-large {
   width: 100%;
-  height: auto;
+  height: 300px;
   object-fit: cover;
   transition: all 0.3s ease;
 }
@@ -669,6 +669,8 @@ h1, h2, h3, h4, h5, h6 {
 .social-img {
   transition: all 0.3s ease;
   cursor: pointer;
+  height: 100px;
+  object-fit: cover;
 }
 
 .social-img:hover {
@@ -717,18 +719,63 @@ footer {
   background-color: var(--dark) !important;
 }
 
-/* Media Queries */
-@media (max-width: 992px) {
-  .hero-section {
-    height: 70vh;
-  }
-  
+/* Utility Classes */
+.gallery-img-square {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+h1.display-3 {
+  font-size: 4rem;
+  letter-spacing: 1px;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+.row.gx-5 {
+  --bs-gutter-x: 3rem;
+}
+
+.text-glow {
+  color: #ffffff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #f0f0f0;
+}
+
+/* Media Queries for Mobile Optimization */
+
+/* Large screens (desktops) */
+@media (max-width: 1200px) {
   .hero-section h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   
   .hero-section h2 {
-    font-size: 2.5rem;
+    font-size: 4.5rem;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+  .hero-section {
+    height: 80vh;
+    min-height: 600px;
+  }
+  
+  .hero-section2, .hero-section3, .hero-section4, .hero-section5 {
+    height: 80vh;
+    min-height: 600px;
+  }
+  
+  .hero-section h1 {
+    font-size: 3.5rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 4rem;
   }
   
   .feature-item {
@@ -764,24 +811,61 @@ footer {
   .profile-card, .story-card, .strength-card {
     padding: 2rem;
   }
-}
-
-@media (max-width: 768px) {
-  .hero-section {
-    height: 60vh;
-    padding-top: 6rem;
+  
+  .menu-img {
+    height: 200px;
   }
   
-  .hero-section h1 {
-    font-size: 2.5rem;
+  .menu-img-large {
+    height: 250px;
   }
   
-  .hero-section h2 {
+  .gift-image {
+    height: 200px;
+  }
+  
+  .team-image img {
+    height: 250px;
+  }
+  
+  .section-title {
     font-size: 2rem;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
   }
   
   .feature-title {
     font-size: 1.8rem;
+  }
+}
+
+/* Small screens (mobile landscape) */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 70vh;
+    min-height: 500px;
+    padding-top: 6rem;
+  }
+  
+  .hero-section2, .hero-section3, .hero-section4, .hero-section5 {
+    height: 70vh;
+    min-height: 500px;
+    padding-top: 6rem;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 3.2rem;
+  }
+  
+  .feature-title {
+    font-size: 1.6rem;
   }
   
   .about-grid {
@@ -789,6 +873,10 @@ footer {
   }
   
   .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .display-4 {
     font-size: 2rem;
   }
   
@@ -799,11 +887,12 @@ footer {
   }
 
   .team-image img {
-    height: 250px;
+    height: 220px;
   }
   
   .timeline-content-enhanced {
     max-width: none;
+    padding: 1.5rem;
   }
   
   .stat-number {
@@ -817,36 +906,95 @@ footer {
   .feature-card-enhanced {
     padding: 2rem 1.5rem;
   }
-}
-
-@media (max-width: 576px) {
-  .hero-section {
-    height: 50vh;
-    padding-top: 4rem;
+  
+  .menu-img {
+    height: 180px;
   }
   
-  .hero-section h1 {
-    font-size: 2rem;
+  .menu-img-large {
+    height: 200px;
   }
   
-  .hero-section h2 {
-    font-size: 1.5rem;
+  .gift-image {
+    height: 180px;
   }
   
-  .feature-title {
-    font-size: 1.5rem;
+  .social-img {
+    height: 80px;
   }
   
-  .section-title {
-    font-size: 1.8rem;
+  .coffee-bean {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .contact-info {
+    font-size: 1rem;
   }
   
   .about p {
     font-size: 1rem;
   }
   
-  .timeline-content-enhanced {
+  .lead {
+    font-size: 1rem;
+  }
+  
+  .appointment-content {
     padding: 1.5rem;
+  }
+  
+  .navbar-brand img {
+    height: 80px !important;
+  }
+  
+  .my-6 {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+}
+
+/* Extra small screens (mobile portrait) */
+@media (max-width: 576px) {
+  .hero-section {
+    height: 60vh;
+    min-height: 450px;
+    padding-top: 5rem;
+  }
+  
+  .hero-section2, .hero-section3, .hero-section4, .hero-section5 {
+    height: 60vh;
+    min-height: 450px;
+    padding-top: 5rem;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 2.5rem;
+  }
+  
+  .feature-title {
+    font-size: 1.4rem;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+  }
+  
+  .display-4 {
+    font-size: 1.8rem;
+  }
+  
+  .about p {
+    font-size: 0.95rem;
+  }
+  
+  .timeline-content-enhanced {
+    padding: 1.2rem;
   }
 
   .team-image img {
@@ -862,45 +1010,173 @@ footer {
   }
   
   .profile-card, .story-card, .strength-card {
-    padding: 1.5rem;
+    padding: 1.2rem;
   }
   
   .company-name {
+    font-size: 1.4rem;
+  }
+  
+  .menu-img {
+    height: 160px;
+  }
+  
+  .menu-img-large {
+    height: 180px;
+  }
+  
+  .gift-image {
+    height: 160px;
+  }
+  
+  .gift-info {
+    padding: 1rem;
+  }
+  
+  .gift-info h4 {
+    font-size: 1.1rem;
+  }
+  
+  .gift-info p {
+    font-size: 0.85rem;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .card-text {
+    font-size: 0.85rem;
+  }
+  
+  .social-img {
+    height: 70px;
+  }
+  
+  .coffee-bean {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .contact-info {
+    font-size: 0.95rem;
+  }
+  
+  .navbar-brand img {
+    height: 70px !important;
+  }
+  
+  .appointment-content {
+    padding: 1rem;
+  }
+  
+  .appointment-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .btn-learn-more {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .feature-card-enhanced {
+    padding: 1.5rem 1rem;
+  }
+  
+  .icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .icon-wrapper i {
     font-size: 1.5rem;
+  }
+  
+  .solution-card {
+    padding: 1.5rem;
+  }
+  
+  .solution-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .solution-icon i {
+    font-size: 1.5rem;
+  }
+  
+  .team-info {
+    padding: 1rem;
+  }
+  
+  .team-info h4 {
+    font-size: 1rem;
+  }
+  
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  
+  .row > * {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
-.gallery-img-square {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
+/* Ultra small screens */
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 2rem;
+  }
+  
+  .display-4 {
+    font-size: 1.6rem;
+  }
+  
+  .section-title {
+    font-size: 1.4rem;
+  }
+  
+  .navbar-brand img {
+    height: 60px !important;
+  }
+  
+  .menu-img {
+    height: 140px;
+  }
+  
+  .gift-image {
+    height: 140px;
+  }
+  
+  .team-image img {
+    height: 180px;
+  }
 }
 
-.social-img {
-  height: 100px;
-  object-fit: cover;
-}
-
-h1.display-3 {
-  font-size: 4rem;
-  letter-spacing: 1px;
-}
-
-h4 {
-  font-size: 1.5rem;
-}
-
-.social-img {
-  height: 100px;
-  object-fit: cover;
-}
-
-.row.gx-5 {
-  --bs-gutter-x: 3rem;
-}
-
-.text-glow {
-  color: #ffffff;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #f0f0f0;
+/* Landscape orientation adjustments for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section, .hero-section2, .hero-section3, .hero-section4, .hero-section5 {
+    height: 100vh;
+    min-height: 400px;
+  }
+  
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 2.5rem;
+  }
 }
