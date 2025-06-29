@@ -131,13 +131,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .menu-img {
-  height: 200px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
   transition: all 0.3s ease;
 }
 
 .menu-img-large {
-  height: 300px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
   transition: all 0.3s ease;
 }
@@ -585,14 +587,6 @@ footer {
   .team-image img {
     height: 250px;
   }
-
-  .menu-img {
-    height: 180px;
-  }
-
-  .menu-img-large {
-    height: 250px;
-  }
 }
 
 @media (max-width: 576px) {
@@ -627,14 +621,6 @@ footer {
 
   .team-image img {
     height: 200px;
-  }
-
-  .menu-img {
-    height: 160px;
-  }
-
-  .menu-img-large {
-    height: 220px;
   }
 }
 
