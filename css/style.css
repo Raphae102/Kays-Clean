@@ -319,7 +319,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-section4 { background-image: url('/images/corporate/Corporate Background.jpg'); }
 .hero-section5 { background-image: url('/images/about/aboutus.jpg'); }
 
-/* ENHANCED MENU SECTION STYLES FOR BETTER FOOD VISIBILITY */
+/* ENHANCED MENU SECTION STYLES FOR NATURAL IMAGE HEIGHTS */
 .menu-category {
   padding: 3rem 0;
 }
@@ -339,25 +339,27 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* SIGNIFICANTLY ENHANCED MENU IMAGE SIZES FOR MAXIMUM FOOD VISIBILITY */
+/* NATURAL HEIGHT MENU IMAGES - MAINTAIN ORIGINAL PROPORTIONS */
 .menu-img {
   width: 100%;
-  height: 350px; /* Increased from previous sizes for much better visibility */
+  height: auto; /* Changed from fixed height to auto for natural proportions */
+  min-height: 200px; /* Minimum height to ensure consistency */
   object-fit: cover;
   object-position: center;
   transition: all 0.4s ease;
-  border-radius: 0; /* Remove border radius for full coverage */
+  border-radius: 0;
   cursor: pointer;
   position: relative;
 }
 
 .menu-img-large {
   width: 100%;
-  height: 450px; /* Increased from previous sizes for much better visibility */
+  height: auto; /* Changed from fixed height to auto for natural proportions */
+  min-height: 250px; /* Minimum height to ensure consistency */
   object-fit: cover;
   object-position: center;
   transition: all 0.4s ease;
-  border-radius: 0; /* Remove border radius for full coverage */
+  border-radius: 0;
   cursor: pointer;
   position: relative;
 }
@@ -1010,13 +1012,13 @@ h4 {
     font-size: 4.5rem;
   }
   
-  /* Maintain large food images on desktop */
+  /* Maintain natural heights on desktop */
   .menu-img {
-    height: 320px;
+    min-height: 180px;
   }
   
   .menu-img-large {
-    height: 420px;
+    min-height: 220px;
   }
 }
 
@@ -1074,13 +1076,13 @@ h4 {
     padding: 2rem;
   }
   
-  /* TABLET MENU IMAGES - MAINTAIN GOOD VISIBILITY */
+  /* TABLET MENU IMAGES - MAINTAIN NATURAL HEIGHTS */
   .menu-img {
-    height: 300px;
+    min-height: 160px;
   }
   
   .menu-img-large {
-    height: 380px;
+    min-height: 200px;
   }
   
   .gift-image {
@@ -1192,17 +1194,13 @@ h4 {
     padding: 2rem 1.5rem;
   }
   
-  /* MOBILE LANDSCAPE MENU IMAGES - EXCELLENT VISIBILITY */
+  /* MOBILE LANDSCAPE MENU IMAGES - NATURAL HEIGHTS WITH MINIMUM */
   .menu-img {
-    height: 280px; /* Increased for excellent mobile visibility */
-    object-fit: cover;
-    object-position: center;
+    min-height: 140px; /* Reduced minimum for mobile but still natural */
   }
   
   .menu-img-large {
-    height: 360px; /* Increased for excellent mobile visibility */
-    object-fit: cover;
-    object-position: center;
+    min-height: 180px; /* Reduced minimum for mobile but still natural */
   }
   
   .gift-image {
@@ -1374,19 +1372,13 @@ h4 {
     font-size: 1.4rem;
   }
   
-  /* MOBILE PORTRAIT MENU IMAGES - OPTIMIZED FOR MAXIMUM FOOD VISIBILITY */
+  /* MOBILE PORTRAIT MENU IMAGES - NATURAL HEIGHTS WITH SMALLER MINIMUM */
   .menu-img {
-    height: 260px; /* Increased for great mobile visibility */
-    object-fit: cover;
-    object-position: center;
-    min-height: 240px; /* Ensure minimum visibility */
+    min-height: 120px; /* Smaller minimum for portrait mobile but still natural */
   }
   
   .menu-img-large {
-    height: 340px; /* Increased for great mobile visibility */
-    object-fit: cover;
-    object-position: center;
-    min-height: 320px; /* Ensure minimum visibility */
+    min-height: 160px; /* Smaller minimum for portrait mobile but still natural */
   }
   
   .gift-image {
@@ -1549,19 +1541,13 @@ h4 {
     height: 60px !important;
   }
   
-  /* ULTRA SMALL SCREEN MENU IMAGES - MAINTAIN EXCELLENT FOOD VISIBILITY */
+  /* ULTRA SMALL SCREEN MENU IMAGES - NATURAL HEIGHTS WITH VERY SMALL MINIMUM */
   .menu-img {
-    height: 240px; /* Increased for good food visibility even on tiny screens */
-    object-fit: cover;
-    object-position: center;
-    min-height: 220px; /* Ensure minimum visibility */
+    min-height: 100px; /* Very small minimum for ultra-small screens but still natural */
   }
   
   .menu-img-large {
-    height: 320px; /* Increased for good food visibility even on tiny screens */
-    object-fit: cover;
-    object-position: center;
-    min-height: 300px; /* Ensure minimum visibility */
+    min-height: 140px; /* Very small minimum for ultra-small screens but still natural */
   }
   
   .gift-image {
@@ -1616,9 +1602,10 @@ h4 {
 
 /* ADDITIONAL MOBILE-SPECIFIC IMPROVEMENTS FOR KAFE 75 FOOD IMAGES */
 @media (max-width: 768px) {
-  /* Ensure all menu images have consistent, excellent visibility */
+  /* Ensure all menu images have consistent, natural visibility */
   .menu-category .menu-item .card-img-top {
-    height: 280px !important;
+    height: auto !important;
+    min-height: 140px !important;
     object-fit: cover;
     object-position: center;
     width: 100%;
@@ -1626,7 +1613,8 @@ h4 {
   
   /* Special handling for large menu images (croffle, drinks) */
   .menu-category .menu-img-large {
-    height: 360px !important;
+    height: auto !important;
+    min-height: 180px !important;
     object-fit: cover;
     object-position: center;
     width: 100%;
@@ -1665,17 +1653,17 @@ h4 {
 
 /* SPECIFIC FIXES FOR VERY SMALL MOBILE SCREENS */
 @media (max-width: 480px) {
-  /* Ensure minimum viable image sizes for excellent food visibility */
+  /* Ensure minimum viable image sizes for natural food visibility */
   .menu-category .menu-item .card-img-top {
-    height: 260px !important;
-    min-height: 240px;
+    height: auto !important;
+    min-height: 120px;
     object-fit: cover;
     object-position: center;
   }
   
   .menu-category .menu-img-large {
-    height: 340px !important;
-    min-height: 320px;
+    height: auto !important;
+    min-height: 160px;
     object-fit: cover;
     object-position: center;
   }
