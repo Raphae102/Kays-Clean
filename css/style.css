@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 .contact-icon {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background: linear-gradient(135deg, var(--dark), var(--primary));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -81,20 +81,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-icon i {
-  color: white;
+  color: white !important;
   font-size: 1.1rem;
 }
 
 .contact-item:hover .contact-icon {
   transform: scale(1.1);
-  box-shadow: 0 5px 15px rgba(118, 89, 78, 0.3);
+  box-shadow: 0 5px 15px rgba(69, 55, 50, 0.4);
+  background: linear-gradient(135deg, var(--primary), var(--dark));
 }
 
 /* Custom Company Icon Styles */
 .contact-icon-custom {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background: linear-gradient(135deg, var(--dark), var(--primary));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -114,7 +115,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-item:hover .contact-icon-custom {
   transform: scale(1.1);
-  box-shadow: 0 5px 15px rgba(118, 89, 78, 0.3);
+  box-shadow: 0 5px 15px rgba(69, 55, 50, 0.4);
+  background: linear-gradient(135deg, var(--primary), var(--dark));
 }
 
 .contact-item:hover .custom-company-icon {
@@ -127,28 +129,46 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-details strong {
-  color: var(--primary);
+  color: var(--dark) !important;
   font-weight: 600;
 }
 
-/* Fix company details styling - remove blue colors */
+.contact-details p {
+  color: var(--dark) !important;
+}
+
+/* Enhanced company details styling */
 .company-details h5 {
-  color: var(--primary) !important;
+  color: var(--dark) !important;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
 .company-details p {
-  color: var(--secondary) !important;
+  color: var(--dark) !important;
   font-weight: 500;
 }
 
-.company-details .text-primary {
-  color: var(--primary) !important;
+/* Remove any blue text colors */
+.contact-section .text-primary,
+.contact-section .text-blue,
+.contact-section .text-info {
+  color: var(--dark) !important;
 }
 
-.company-details .text-muted {
-  color: var(--secondary) !important;
+.contact-section .text-muted {
+  color: #6c757d !important;
+}
+
+/* Ensure phone and email links are dark */
+.contact-details a {
+  color: var(--dark) !important;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  color: var(--primary) !important;
+  text-decoration: underline;
 }
 
 /* Enhanced Social Media Section Styles */
