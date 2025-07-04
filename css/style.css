@@ -33,6 +33,73 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
+/* Enhanced Contact Section Styles */
+.company-header {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(118, 89, 78, 0.05), rgba(184, 165, 158, 0.05));
+  border-radius: 15px;
+  border: 1px solid rgba(118, 89, 78, 0.1);
+  transition: all 0.3s ease;
+}
+
+.company-header:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(118, 89, 78, 0.1);
+}
+
+.company-logo img {
+  border: 3px solid var(--primary);
+  transition: all 0.3s ease;
+}
+
+.company-header:hover .company-logo img {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(118, 89, 78, 0.3);
+}
+
+.contact-item {
+  padding: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  background: rgba(118, 89, 78, 0.05);
+  transform: translateX(5px);
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.contact-icon i {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.contact-item:hover .contact-icon {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(118, 89, 78, 0.3);
+}
+
+.contact-details p {
+  margin-bottom: 0.25rem;
+  line-height: 1.5;
+}
+
+.contact-details strong {
+  color: var(--primary);
+  font-weight: 600;
+}
+
 /* Enhanced About Page Styles */
 .hero-divider {
   width: 80px;
@@ -1126,6 +1193,21 @@ h4 {
   .modal-nav.next {
     right: 20px;
   }
+  
+  /* Contact section mobile adjustments */
+  .company-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .company-header .company-logo {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-item {
+    margin-bottom: 1rem;
+  }
 }
 
 /* Small screens (mobile landscape) */
@@ -1306,6 +1388,24 @@ h4 {
     content: '🔍 Tap to enlarge';
     font-size: 11px;
     padding: 6px 10px;
+  }
+  
+  /* Mobile contact section improvements */
+  .company-header {
+    padding: 1rem;
+  }
+  
+  .contact-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .contact-icon i {
+    font-size: 1rem;
+  }
+  
+  .contact-details {
+    font-size: 0.95rem;
   }
 }
 
@@ -1517,6 +1617,37 @@ h4 {
   .modal-image-info h5 {
     font-size: 1rem;
   }
+  
+  /* Extra small contact section */
+  .company-header {
+    padding: 0.75rem;
+  }
+  
+  .company-logo img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .contact-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .contact-icon i {
+    font-size: 0.9rem;
+  }
+  
+  .contact-details {
+    font-size: 0.9rem;
+  }
+  
+  .company-details h5 {
+    font-size: 1rem;
+  }
+  
+  .company-details p {
+    font-size: 0.8rem;
+  }
 }
 
 /* Ultra small screens */
@@ -1581,6 +1712,37 @@ h4 {
   .gift-info,
   .card-body {
     padding: 1rem;
+  }
+  
+  /* Ultra small contact section */
+  .company-header {
+    padding: 0.5rem;
+  }
+  
+  .company-logo img {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .contact-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .contact-icon i {
+    font-size: 0.8rem;
+  }
+  
+  .contact-details {
+    font-size: 0.85rem;
+  }
+  
+  .company-details h5 {
+    font-size: 0.95rem;
+  }
+  
+  .company-details p {
+    font-size: 0.75rem;
   }
 }
 
