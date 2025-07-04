@@ -204,10 +204,11 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--primary);
 }
 
+/* FORCE SOCIAL MEDIA ICONS TO BE BROWN WITH WHITE ICONS - HOSTINGER OVERRIDE */
 .social-platform-header i {
   transition: all 0.3s ease;
   color: white !important;
-  background: linear-gradient(135deg, rgba(118, 89, 78, 0.1), rgba(184, 165, 158, 0.1));
+  background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
   padding: 0.8rem;
   border-radius: 50%;
   width: 60px;
@@ -215,12 +216,28 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+  box-shadow: 0 5px 15px rgba(118, 89, 78, 0.3) !important;
+}
+
+/* Specific overrides for TikTok and Instagram icons */
+.social-platform-header .fab.fa-tiktok,
+.social-platform-header .fab.fa-instagram {
+  color: white !important;
+  background: linear-gradient(135deg, #76594e, #b8a59e) !important;
+  border: none !important;
+}
+
+/* Force override any external CSS that might be affecting the icons */
+.social-platform-header i.fab {
+  background: linear-gradient(135deg, #76594e, #b8a59e) !important;
+  color: #ffffff !important;
+  border: none !important;
+  outline: none !important;
 }
 
 .social-platform-header:hover i {
   transform: scale(1.15) rotate(5deg);
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background: linear-gradient(135deg, var(--secondary), var(--primary)) !important;
   color: white !important;
   box-shadow: 0 5px 15px rgba(118, 89, 78, 0.3);
 }
@@ -238,18 +255,74 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(5px);
 }
 
-/* Ensure social media layout is left-aligned */
+/* ENHANCED SOCIAL MEDIA LAYOUT - DESKTOP AND MOBILE */
 .social-platform-header .d-flex {
   justify-content: flex-start !important;
   text-align: left !important;
   align-items: center;
   gap: 1.5rem;
+  flex-wrap: nowrap !important;
 }
 
 .social-platform-header div:last-child {
   text-align: left !important;
 }
 
+/* MOBILE SPECIFIC FIXES FOR SOCIAL MEDIA LAYOUT */
+@media (max-width: 768px) {
+  .social-platform-header {
+    padding: 1.5rem 1rem;
+  }
+  
+  .social-platform-header .d-flex {
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    text-align: left !important;
+    gap: 1rem !important;
+  }
+  
+  .social-platform-header i {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 1.5rem !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    flex-shrink: 0 !important;
+  }
+  
+  .social-platform-header h4 {
+    font-size: 1.1rem !important;
+    margin: 0 !important;
+    text-align: left !important;
+    flex: 1 !important;
+  }
+  
+  /* Force mobile layout to stay horizontal */
+  .social-platform-header .d-flex.align-items-center {
+    flex-direction: row !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .social-platform-header {
+    padding: 1rem 0.75rem;
+  }
+  
+  .social-platform-header i {
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 1.3rem !important;
+  }
+  
+  .social-platform-header h4 {
+    font-size: 1rem !important;
+  }
+  
+  .social-platform-header .d-flex {
+    gap: 0.75rem !important;
+  }
+}
 /* Enhanced social media grid images */
 .social-img {
   transition: all 0.4s ease;
