@@ -189,6 +189,16 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.5px;
 }
 
+/* Ensure social media layout is left-aligned */
+.social-platform-header .d-flex {
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+
+.social-platform-header div:last-child {
+  text-align: left !important;
+}
+
 /* Enhanced About Page Styles */
 .hero-divider {
   width: 80px;
