@@ -131,6 +131,26 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
+/* Fix company details styling - remove blue colors */
+.company-details h5 {
+  color: var(--primary) !important;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.company-details p {
+  color: var(--secondary) !important;
+  font-weight: 500;
+}
+
+.company-details .text-primary {
+  color: var(--primary) !important;
+}
+
+.company-details .text-muted {
+  color: var(--secondary) !important;
+}
+
 /* Enhanced Social Media Section Styles */
 .social-platform-header {
   background: white;
