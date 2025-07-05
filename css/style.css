@@ -947,6 +947,21 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Gallery Image Square Styling - STANDARDIZED */
+.gallery-img-square {
+  width: 100%;
+  height: 120px; /* Fixed height for consistent square appearance */
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-img-square:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
 /* Social Media Section */
 .social-platform-title {
   font-size: 1.2rem;
@@ -1009,13 +1024,6 @@ footer {
 }
 
 /* Utility Classes */
-.gallery-img-square {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
 h1.display-3 {
   font-size: 4rem;
   letter-spacing: 1px;
@@ -1285,6 +1293,11 @@ h4 {
   .menu-img-large {
     min-height: 220px;
   }
+  
+  /* Standardized gallery images */
+  .gallery-img-square {
+    height: 110px;
+  }
 }
 
 /* Medium screens (tablets) */
@@ -1422,6 +1435,11 @@ h4 {
   
   .social-info h4 {
     font-size: 1.3rem;
+  }
+  
+  /* Standardized gallery images for tablet */
+  .gallery-img-square {
+    height: 100px;
   }
 }
 
@@ -1653,6 +1671,11 @@ h4 {
   
   .social-grid {
     gap: 0.5rem;
+  }
+  
+  /* Standardized gallery images for mobile landscape */
+  .gallery-img-square {
+    height: 90px;
   }
 }
 
@@ -1930,6 +1953,11 @@ h4 {
   .social-grid {
     gap: 0.4rem;
   }
+  
+  /* Standardized gallery images for mobile portrait */
+  .gallery-img-square {
+    height: 80px;
+  }
 }
 
 /* Ultra small screens */
@@ -2052,6 +2080,11 @@ h4 {
   
   .social-grid {
     gap: 0.3rem;
+  }
+  
+  /* Standardized gallery images for ultra small screens */
+  .gallery-img-square {
+    height: 70px;
   }
 }
 
